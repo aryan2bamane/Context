@@ -1,14 +1,16 @@
 import UserBio from "./components/UserBio";
-import UserInfo from "./components/UserInfo";
+import UserCard from "./components/UserCard";
+import UserContextProvider from "./contexts/UserContextProvider";
 
 function App() {
   return (
-    <>
-      <div className=" m-0 p-0 flex flex-col h-screen w-screen bg-sky-400 justify-center items-center">
+    <UserContextProvider>
+      <div className="  py-20 flex flex-col h-screen w-screen bg-sky-400 justify-start items-center">
         <UserBio />
-        <UserInfo />
+
+        <UserCard />
       </div>
-    </>
+    </UserContextProvider>
   );
 }
 
